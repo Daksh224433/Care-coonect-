@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Building a Culture of Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #4CAF50;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal-content h3 {
+            margin-top: 0;
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .modal-content button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .modal-content button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CareConnect</h1>
+        <p>Connecting people who need support with those who can provide it</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#join">Join Us</a>
+        <!-- Link to third.html (Support Circles) -->
+        <a href="third.html" target="_blank">Explore Support Circles</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About CareConnect</h2>
+            <p>CareConnect is a platform designed to connect individuals in need of emotional, mental, or practical support with caring volunteers ready to help. Our mission is to foster a culture of mutual aid and empathy in every community.</p>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Features</h2>
+            <div class="cards">
+                <!-- Link the Support Circles card to third.html -->
+                <a href="third.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        <h3>Support Circles</h3>
+                        <p>Join or create groups for shared experiences, advice, and encouragement.</p>
+                    </div>
+                </a>
+
+                <!-- Link for Volunteer Hub -->
+                <div class="card">
+                    <a href="forth.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        <h3>Volunteer Hub</h3>
+                        <p>Offer your time or skills to help those in need within your community.</p>
+                    </a>
+                </div>
+                <!-- Link for Mental Health Resources -->
+                <div class="card">
+                    <a href="second.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        <h3>Mental Health Resources</h3>
+                        <p>Access curated tools, guides, and professional help for mental well-being.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="section">
+            <h2>Join Us</h2>
+            <p>Be part of a community that cares. Whether you need support or want to offer it, CareConnect is here for you.</p>
+            <button onclick="openModal()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Get Started</button>
+        </section>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Join CareConnect</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="closeModal()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 CareConnect. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
